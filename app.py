@@ -1,3 +1,6 @@
+# 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
+# https://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@github.com/maja5099/mysite.git
+
 #########################
 from bottle import default_app, get, post, run
 import git
@@ -14,7 +17,7 @@ def git_update():
 ##############################
 @get("/")
 def _():
-    return "One"
+    return "Two"
 
 
 ##############################

@@ -2,7 +2,7 @@
 # https://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@github.com/maja5099/mysite.git
 
 #########################
-from bottle import default_app, get, post, run
+from bottle import default_app, get, post, run, template
 import git
 
 @post('/secret_url_for_git_hook')

@@ -27,3 +27,10 @@ try:
 except Exception as ex:
     print("Running local server")
     run(host="127.0.0.1", port=80, debug=True, reloader=True)
+
+
+################################### 
+# Route, shows html (index) and variable title
+@get("/")
+def render_index():
+    return template("index", title="Twitter", tweets=tweets, trends=trends, users=users)

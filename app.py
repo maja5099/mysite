@@ -15,9 +15,9 @@ def git_update():
 
 
 ##############################
-@get("/")
-def _():
-    return "Three"
+# @get("/")
+# def _():
+#     return "Three"
 
 
 ##############################
@@ -31,6 +31,6 @@ except Exception as ex:
 
 ################################### 
 # Route, shows html (index) and variable title
-# @get("/")
-# def render_index():
-#     return template("index", title="Twitter", tweets=tweets, trends=trends, users=users)
+@get("/")
+def render_index():
+    return template("index", title="Twitter", tweets=tweets, trends=trends, users=users)

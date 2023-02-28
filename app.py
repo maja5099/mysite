@@ -19,6 +19,29 @@ def git_update():
 # def _():
 #     return "Three"
 
+################################### 
+# Import and show webp images via the folder
+@get("/images/<filename:re:.*\.webp>")
+def _(filename):
+    return static_file(filename, root="./images")
+
+################################### 
+# Import and show png images via the folder
+@get("/images/<filename:re:.*\.png>")
+def _(filename):
+    return static_file(filename, root="./images")
+
+################################### 
+# Import and show jpg images via the folder
+@get("/images/<filename:re:.*\.jpg>")
+def _(filename):
+    return static_file(filename, root="./images")
+
+################################### 
+# Import and show CSS
+@get("/app.css")
+def _():
+    return static_file("app.css", root=".")
 
 ##############################
 try:
@@ -34,3 +57,5 @@ except Exception as ex:
 @get("/")
 def render_index():
     return template("index", title="Twitter")
+
+

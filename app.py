@@ -4,6 +4,7 @@
 #########################
 from bottle import default_app, get, post, static_file, run, template
 import git
+import sqlite3
 
 @post('/secret_url_for_git_hook')
 def git_update():

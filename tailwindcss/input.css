@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+    #button {
+        @apply text-15 font-bold px-4 py-1.5 rounded-full;
+    }
+    #sm_light_txt {
+        @apply text-15 text-twitter-light-grey;
+    }
+    #sm_light_bold_txt {
+        @apply text-15 font-bold text-twitter-light-grey;
+    }
+    #lg_light_txt {
+        @apply text-20 text-twitter-light-grey;
+    }
+    #lg_light_bold_txt {
+        @apply text-20 font-bold text-twitter-light-grey;
+    }
+    #sm_dark_txt {
+        @apply text-13 text-twitter-grey;
+    }
+    #sm_dark_bold_txt {
+        @apply text-13 font-bold text-twitter-grey;
+    }
+    #dark_txt {
+        @apply text-15 text-twitter-grey;
+    }
+    #dark_semibold_txt {
+        @apply text-15 font-medium text-twitter-grey;
+    }
+    #lg_dark_txt {
+        @apply text-20 text-twitter-grey;
+    }
+} */

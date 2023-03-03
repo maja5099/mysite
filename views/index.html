@@ -5,26 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/app.css">
-    <title>Document</title>
+    <title>{{title}}</title>
 </head>
 <body class="bg-black">
 
     <div class=" md:max-w-3xl lg:max-w-7xl m-auto">
         <div class="grid grid-cols-4">
             <!-- left start -->
-            <div class="bg-orange-600 text-right p-2 col-span-1 sticky">
-                <p>test 1</p>
+            <div class="px-3 col-span-1">
+                <div class="sticky top-3">
+                    <div class="flex flex-col h-screen">
+
+                        <!-- top start -->
+                        <div class="grid gap-y-3 w-10/12">
+                            <!-- twitter logo start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-icons-blue-bg-hover rounded-full p-3 w-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                            </div>
+                            <!-- twitter logo end -->
+
+                            <!-- home start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_bold_txt" class="text-20 invisible md:visible font-bold text-twitter-light-grey">Home</span>
+                            </div>
+                            <!-- home end -->
+
+                            <!-- explore start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">Explore</span>
+                            </div>
+                            <!-- explore end -->
+
+                            <!-- notifications start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">Notifications</span>
+                            </div>
+                            <!-- notifications end -->
+
+                            <!-- messages start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">Messages</span>
+                            </div>
+                            <!-- messages end -->
+
+                            <!-- bookmarks start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">Bookmarks</span>
+                            </div>
+                            <!-- bookmarks end -->
+
+                            <!-- profile start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">Profile</span>
+                            </div>
+                            <!-- profile end -->
+
+                            <!-- more start -->
+                            <div class="flex items-center gap-2 lg:gap-6 hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-twitter-light-grey">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span id="lg_light_txt" class="text-20 invisible md:visible text-twitter-light-grey">More</span>
+                            </div>
+                            <!-- more end -->
+
+                            <button id="button" class="text-17 invisible md:visible mt-2 font-bold text-twitter-light-grey px-4 py-4 rounded-full bg-twitter-blue-original">Tweet</button>
+                        </div>
+                        <!-- top end -->
+
+                        <!-- bottom start -->
+                        <div class="bottom-0 mt-auto pb-3">
+                            <div class="hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <div class="flex justify-between w-full items-center">
+                                    <!-- left start -->
+                                    <div class="flex items-center gap-2 lg:gap-4">
+                                        <div>
+                                            <img src="/images/avatars/9710eebde79f4e7b9a1873b4bf1c9792.jpg" class="w-10 rounded-full" alt="">
+                                        </div>
+
+                                        <div class="invisible md:visible text-left">
+                                            <p id="sm_light_bold_txt" class="text-15 font-bold text-twitter-light-grey">Username</p>
+                                            <p id="dark_txt" class="text-15 text-twitter-grey">@username</p>
+                                        </div>
+                                    </div>
+                                    <!-- left end -->
+
+                                    <!-- right start -->
+                                    <div class="invisible md:visible">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-twitter-grey">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg> 
+                                    </div>
+                                    <!-- right end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bottom end -->
+                    </div>
+                </div>
             </div>
             <!-- left end -->
 
             <!-- middle start -->
             <div class="border-x border-twitter-line col-span-3 lg:col-span-2">
                 <!-- home start -->
-                <div>
+                <div class="sticky bg-black bg-opacity-70 top-0 backdrop-blur-lg">
                     <p id="lg_light_bold_txt" class="text-20 font-bold text-twitter-light-grey px-4 py-3">Home</p>
                     <div class="flex justify-around text-center">
-                        <a id="sm_light_bold_txt" href="" class="text-15 font-bold text-twitter-light-grey w-full hover:bg-twitter-dark-hover p-5"><span class="border-b-4 pb-4 border-twitter-blue-original">For you</span></a>
-                        <a id="dark_semibold_txt" href="" class="text-15 font-medium text-twitter-grey w-full hover:bg-twitter-dark-hover p-5">Following</a>
+                        <a id="sm_light_bold_txt" href="" class="text-15 font-bold text-twitter-light-grey w-full hover:backdrop-brightness-125 p-5"><span class="border-b-4 pb-4 border-twitter-blue-original">For you</span></a>
+                        <a id="dark_semibold_txt" href="" class="text-15 font-semibold text-twitter-grey w-full hover:backdrop-brightness-125 p-5">Following</a>
                     </div>
                 </div>
                 <!-- home end -->
@@ -268,7 +377,7 @@
 
             <!-- right start -->
             <div class="bg-twitter-icons-red col-span-1 text-center invisible md:invisible lg:visible lg:text-left px-6 pt-1">
-                <div class="w-full bg-white">
+                <div class="w-full bg-white sticky top-1">
                     <p>test 3</p>
                 </div>
             </div>

@@ -23,6 +23,13 @@ module.exports = {
         'twitter-green': '#19c981',
         'twitter-red': '#fd187d',
       },
+      opacity: {
+        '15': '.15',
+      },
+      transitionDuration: {
+        '50': '50ms',
+        '250': '250ms',
+      }
     },
   },
   plugins: [],

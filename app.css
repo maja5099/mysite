@@ -1127,6 +1127,25 @@ video {
   background-color: transparent;
 }
 
+.group:hover .group-hover\:bg-twitter-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 161 242 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-twitter-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 201 129 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-twitter-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 24 125 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
 .group:hover .group-hover\:text-twitter-green {
   --tw-text-opacity: 1;
   color: rgb(25 201 129 / var(--tw-text-opacity));

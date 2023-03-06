@@ -19,17 +19,9 @@ module.exports = {
         'twitter-dark-hover': '#181818', 
         'twitter-right-box-bg': '#16181C',
         'twitter-line': '#2F3336',
-        'twitter-blue': {
-          original: '#1DA1F2',
-          hover: '#1A8CD8',
-        },
-        'twitter-icons': {
-          green: '#19cf86',
-          'green-bg-hover': '#071A14',
-          red: '#fb197d',
-          'red-bg-hover': '#200914',
-          'blue-bg-hover': '#0A171F'
-        }
+        'twitter-blue': '#1DA1F2',
+        'twitter-green': '#19c981',
+        'twitter-red': '#fd187d',
       },
     },
   },

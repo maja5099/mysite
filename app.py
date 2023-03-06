@@ -34,21 +34,15 @@ def git_update():
 
 
 ###################################
-# IMPORT AND SHOW WEBP IMAGES
+# IMPORT AND SHOW WEBP, PNG & JPG IMAGES
 @get("/images/<filename:re:.*\.webp>")
 def _(filename):
     return static_file(filename, root="./images")
 
-
-###################################
-# IMPORT AND SHOW PNG IMAGES
 @get("/images/<filename:re:.*\.png>")
 def _(filename):
     return static_file(filename, root="./images")
 
-
-###################################
-# IMPORT AND SHOW JPG IMAGES
 @get("/images/<filename:re:.*\.jpg>")
 def _(filename):
     return static_file(filename, root="./images")
@@ -69,7 +63,10 @@ def render_index():
         db = sqlite3.connect(str(pathlib.Path(__file__).parent.resolve())+"/twitter.db")
         db.row_factory = dict_factory
         tweets = db.execute("SELECT * FROM tweets")
-        return template("index", title="Twitter", tweets=tweets)
+        trends = db.execute("SELECT * FROM trends")
+        users = db.execute("SELECT * FROM users")
+        users_and_tweets = db.execute("SELECT * FROM users_and_tweets")
+        return template("index", title="Twitter", tweets=tweets, trends=trends, users=users, users_and_tweets=users_and_tweets)
     
     except Exception as ex:
         print(ex)
@@ -116,7 +113,7 @@ try:
     application = default_app()
 except Exception as ex:
     print("Running local server")
-    run(host="127.0.0.1", port=4000, debug=True, reloader=True)
+    run(host="127.0.0.1", port=5000, debug=True, reloader=True)
 
 
 ###################################

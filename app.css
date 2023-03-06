@@ -922,6 +922,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1108,6 +1113,14 @@ video {
   --tw-bg-opacity: 0.1;
 }
 
+.hover\:bg-opacity-75:hover {
+  --tw-bg-opacity: 0.75;
+}
+
+.hover\:bg-opacity-90:hover {
+  --tw-bg-opacity: 0.9;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1162,6 +1175,11 @@ video {
 }
 
 .group:focus .group-focus\:text-twitter-blue {
+  --tw-text-opacity: 1;
+  color: rgb(29 161 242 / var(--tw-text-opacity));
+}
+
+.group:active .group-active\:text-twitter-blue {
   --tw-text-opacity: 1;
   color: rgb(29 161 242 / var(--tw-text-opacity));
 }

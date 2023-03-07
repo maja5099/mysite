@@ -29,6 +29,12 @@ module.exports = {
       transitionDuration: {
         '50': '50ms',
         '250': '250ms',
+      },
+      width: {
+        '13': '0.813rem',
+        '250': '15.625rem',
+        '350': '21.875rem',
+        '600': '37.5rem',
       }
     },
   },

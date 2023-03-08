@@ -114,7 +114,7 @@ try:
     application = default_app()
 except Exception as ex:
     print("Running local server")
-    run(host="127.0.0.1", port=5000, debug=True, reloader=True)
+    run(host="127.0.0.1", port=3000, debug=True, reloader=True)
 
 
 ###################################

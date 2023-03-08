@@ -11,15 +11,15 @@
 </head>
 <body class="bg-black">
 
-    <div class=" md:max-w-3xl lg:max-w-7xl m-auto">
-        <div class="grid grid-cols-4">
+    <div class="md:max-w-3xl lg:max-w-screen-xl mx-auto">
+        <div class="flex justify-center">
             <!-- left start -->
-            <div class="px-3 col-span-1">
-                <div class="sticky top-0.5 flex justify-end">
-                    <div class="flex flex-col h-screen justify-end w-10/12">
-
+            <div class="w-20 lg:w-250">
+                <div class="sticky top-0.5 flex justify-center md:justify-end lg:justify-start ">
+                    <div class="flex flex-col h-screen justify-center items-center lg:w-10/12">
+                        <div class="flex justify-center">
                         <!-- top start -->
-                        <div class="grid gap-y-1 items-end">
+                        <div class="grid gap-y-2 lg:gap-y-1 items-center w-full">
                             <!-- twitter logo start -->
                             <div class="flex items-center mt-0.5 gap-2 lg:gap-6 hover:cursor-pointer text-twitter-light-grey hover:bg-twitter-blue hover:bg-opacity-15 rounded-full p-3 w-fit transition duration-200 ease-in-out">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 23.643 4.937 c -0.835 0.37 -1.732 0.62 -2.675 0.733 c 0.962 -0.576 1.7 -1.49 2.048 -2.578 c -0.9 0.534 -1.897 0.922 -2.958 1.13 c -0.85 -0.904 -2.06 -1.47 -3.4 -1.47 c -2.572 0 -4.658 2.086 -4.658 4.66 c 0 0.364 0.042 0.718 0.12 1.06 c -3.873 -0.195 -7.304 -2.05 -9.602 -4.868 c -0.4 0.69 -0.63 1.49 -0.63 2.342 c 0 1.616 0.823 3.043 2.072 3.878 c -0.764 -0.025 -1.482 -0.234 -2.11 -0.583 v 0.06 c 0 2.257 1.605 4.14 3.737 4.568 c -0.392 0.106 -0.803 0.162 -1.227 0.162 c -0.3 0 -0.593 -0.028 -0.877 -0.082 c 0.593 1.85 2.313 3.198 4.352 3.234 c -1.595 1.25 -3.604 1.995 -5.786 1.995 c -0.376 0 -0.747 -0.022 -1.112 -0.065 c 2.062 1.323 4.51 2.093 7.14 2.093 c 8.57 0 13.255 -7.098 13.255 -13.254 c 0 -0.2 -0.005 -0.402 -0.014 -0.602 c 0.91 -0.658 1.7 -1.477 2.323 -2.41 Z"/></svg>
@@ -91,51 +91,45 @@
                             <!-- more end -->
                             
                             <!-- tweet button start -->
-                            <div class="mt-4 flex lg:hidden items-center w-fit hover:cursor-pointer text-twitter-light-grey hover:bg-opacity-90 p-3 rounded-full bg-twitter-blue transition duration-200 ease-in-out">
+                            <div class="mt-4 flex justify-center items-center lg:hidden w-fit hover:cursor-pointer text-twitter-light-grey hover:bg-opacity-90 p-3 rounded-full bg-twitter-blue transition duration-200 ease-in-out">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 23 3 c -6.62 -0.1 -10.38 2.421 -13.05 6.03 C 7.29 12.61 6 17.331 6 22 h 2 c 0 -1.007 0.07 -2.012 0.19 -3 H 12 c 4.1 0 7.48 -3.082 7.94 -7.054 C 22.79 10.147 23.17 6.359 23 3 Z m -7 8 h -1.5 v 2 H 16 c 0.63 -0.016 1.2 -0.08 1.72 -0.188 C 16.95 15.24 14.68 17 12 17 H 8.55 c 0.57 -2.512 1.57 -4.851 3 -6.78 c 2.16 -2.912 5.29 -4.911 9.45 -5.187 C 20.95 8.079 19.9 11 16 11 Z M 4 9 V 6 H 1 V 4 h 3 V 1 h 2 v 3 h 3 v 2 H 6 v 3 H 4 Z"/></svg>
                             </div>
-                            <button id="button" class="text-17 w-11/12 hidden lg:flex justify-center font-bold text-twitter-light-grey mt-5 px-4 py-3 hover:bg-opacity-90 rounded-full bg-twitter-blue transition duration-200 ease-in-out">Tweet</button>
+                            <button id="button" class="text-17 hidden lg:flex justify-center font-bold text-twitter-light-grey mt-5 px-4 py-3 hover:bg-opacity-90 rounded-full bg-twitter-blue transition duration-200 ease-in-out">Tweet</button>
                             <!-- tweet button end -->
+                        </div>
                         </div>
                         <!-- top end -->
 
                         <!-- bottom start -->
-                        <div class="bottom-0 mt-auto pb-3">
-                            <div class="">
-                                <div class="">
-                                    <!-- left start -->
-                                    <!-- mobile start -->
-                                    <div class="flex lg:hidden hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                        <div class="bottom-0 mt-auto pb-3 w-full">
+                            <!-- left start -->
+                            <!-- mobile start -->
+                            <div class="flex items-center lg:hidden hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <img src="/images/avatars/9710eebde79f4e7b9a1873b4bf1c9792.jpg" class="w-10 rounded-full" alt="">
+                            </div>
+                            <!-- mobile end -->
+
+                            <!-- web start -->
+                            <div class="hidden lg:flex items-center justify-between hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
+                                <div class="flex items-center gap-2 lg:gap-3">
+                                    <div class="">
                                         <img src="/images/avatars/9710eebde79f4e7b9a1873b4bf1c9792.jpg" class="w-10 rounded-full" alt="">
                                     </div>
-                                    <!-- mobile end -->
 
-                                    <!-- web start -->
-                                    <div class="hidden lg:flex items-center justify-between hover:cursor-pointer hover:bg-twitter-dark-hover rounded-full p-3">
-                                        <div class="flex items-center gap-2 lg:gap-3">
-                                            <div class="">
-                                                <img src="/images/avatars/9710eebde79f4e7b9a1873b4bf1c9792.jpg" class="w-10 rounded-full" alt="">
-                                            </div>
-
-                                            <div class="">
-                                                <div class="text-left">
-                                                    <p id="sm_light_bold_txt" class="text-15 font-bold text-twitter-light-grey">Username</p>
-                                                    <p id="dark_txt" class="text-15 text-twitter-grey">@username</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- left end -->
-
-                                        <!-- right (more) start -->
-                                        <div class="text-twitter-light-grey">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 3 12 c 0 -1.1 0.9 -2 2 -2 s 2 0.9 2 2 s -0.9 2 -2 2 s -2 -0.9 -2 -2 Z m 9 2 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z m 7 0 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z"/></svg>
-                                        </div>
-                                        <!-- right (more) end -->
+                                    <div class="text-left">
+                                        <p id="sm_light_bold_txt" class="text-15 font-bold text-twitter-light-grey">Username</p>
+                                        <p id="dark_txt" class="text-15 text-twitter-grey">@username</p>
                                     </div>
-                                    <!-- web end -->
-
                                 </div>
+                                <!-- left end -->
+
+                                <!-- right (more) start -->
+                                <div class="text-twitter-light-grey">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 3 12 c 0 -1.1 0.9 -2 2 -2 s 2 0.9 2 2 s -0.9 2 -2 2 s -2 -0.9 -2 -2 Z m 9 2 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z m 7 0 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z"/></svg>
+                                </div>
+                                <!-- right (more) end -->
                             </div>
+                            <!-- web end -->
                         </div>
                         <!-- bottom end -->
                     </div>
@@ -144,7 +138,7 @@
             <!-- left end -->
 
             <!-- middle start -->
-            <div class="border-x border-twitter-line col-span-3 lg:col-span-2">
+            <div class="border-x border-twitter-line w-full lg:w-600">
                 <!-- home start -->
                 <div class="sticky bg-black bg-opacity-70 top-0 backdrop-blur-lg border-b border-twitter-line">
                     <p id="lg_light_bold_txt" class="text-20 font-bold text-twitter-light-grey px-4 py-3">Home</p>
@@ -330,7 +324,7 @@
             <!-- middle end -->
 
             <!-- right start -->
-            <div class="col-span-1 text-center invisible md:invisible lg:visible lg:text-left pl-6 pt-1">
+            <div class="col-span-1 hidden lg:block pl-6 pt-1">
                 <div class="w-full sticky top-1">
                     <!-- search start -->
                     <div class="relative block group">

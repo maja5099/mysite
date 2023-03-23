@@ -40,10 +40,10 @@ CREATE TABLE tweets(
     tweet_image                 TEXT,
     tweet_created_at            TEXT,
     tweet_user_fk               TEXT,
-    tweet_total_comments        TEXT,
-    tweet_total_retweets        TEXT,
-    tweet_total_likes           TEXT,
-    tweet_total_views           TEXT,
+    tweet_total_comments        TEXT DEFAULT 0,
+    tweet_total_retweets        TEXT DEFAULT 0,
+    tweet_total_likes           TEXT DEFAULT 0,
+    tweet_total_views           TEXT DEFAULT 0,
     PRIMARY KEY(tweet_id)
 )WITHOUT ROWID;
 

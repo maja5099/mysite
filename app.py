@@ -4,6 +4,7 @@
 
 ###################################
 from bottle import default_app, get, post, static_file, run, template, response, request
+import os
 import git
 import sqlite3
 import pathlib
@@ -15,6 +16,12 @@ import datetime
 print("#"*30)
 print("directory of the script being run")
 print(pathlib.Path(__file__).parent.resolve()) # /home/USERNAME/mysite
+
+
+##############################
+@get("/js/<filename>")
+def _(filename):
+    return static_file(filename, "js")
 
 
 ###################################
@@ -72,7 +79,7 @@ def render_index():
     except Exception as ex:
         print(ex)
         response.status = 400
-        return {"error": str(ex)}
+        return {"error index": str(ex)}
 
     finally:
         if "db" in locals(): db.close()
@@ -84,6 +91,7 @@ def render_index():
 def _(username):
     try:
         db = sqlite3.connect(str(pathlib.Path(__file__).parent.resolve())+"/twitter.db")
+        # db = sqlite3.connect(os.getcwd()+"/twitter.db")
         db.row_factory = dict_factory
         user = db.execute("SELECT * FROM users WHERE username=? COLLATE NOCASE",(username,)).fetchall()[0]
         # Get the user's id
@@ -101,10 +109,19 @@ def _(username):
 
     except Exception as ex:
         print(ex)
-        return "error"
+        return str(ex)
         
     finally:
         if "db" in locals(): db.close()
+
+
+##############################
+# VEIWS
+import views.tweet
+
+##############################
+# APIS
+import apis.api_tweet
 
 
 ###################################

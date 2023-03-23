@@ -309,7 +309,7 @@
                         <div class="w-11/12">
 
                             <!-- username + data start -->
-                            <div class="w-fit">
+                            <div class="w-full">
                                 <div class="flex justify-between">
                                     <div class="inline-flex items-center gap-1 lg:gap-1.5">
                                         <p id="sm_light_bold_txt" class="text-15 font-bold text-twitter-light-grey hover:underline hover:cursor-pointer transition duration-200 ease-in-out">{{user_and_tweet["user_first_name"]}}&nbsp{{user_and_tweet["user_last_name"]}}</p>   
@@ -326,16 +326,19 @@
                                     </div>
 
                                     <!-- more start -->
-                                    <div class="relative flex items-center">
-                                        <div class="absolute hover:bg-twitter-blue text-twitter-grey hover:text-twitter-blue hover:bg-opacity-15 rounded-full hover:cursor-pointer p-2 transition duration-200 ease-in-out">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 3 12 c 0 -1.1 0.9 -2 2 -2 s 2 0.9 2 2 s -0.9 2 -2 2 s -2 -0.9 -2 -2 Z m 9 2 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z m 7 0 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z"/></svg>
+                                    <div class="">
+                                        <div class="relative">
+                                            <div class=" absolute hover:bg-twitter-blue text-twitter-grey hover:text-twitter-blue hover:bg-opacity-15 rounded-full hover:cursor-pointer p-2 transition duration-200 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 3 12 c 0 -1.1 0.9 -2 2 -2 s 2 0.9 2 2 s -0.9 2 -2 2 s -2 -0.9 -2 -2 Z m 9 2 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z m 7 0 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z"/></svg>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- more end -->
                                 </div>
                             </div>
+                
                             <!-- username + data end -->
-
+                            <div>
                             <!-- tweet message start -->
                             <p id="sm_light_txt" class="text-15 text-twitter-light-grey">{{user_and_tweet["tweet_message"]}}</p>
                             <!-- tweet message end -->
@@ -394,6 +397,7 @@
                             
                             </div>
                             <!-- icons end -->
+                            </div>
                         </div>
                         <!-- right end -->
                     </div>

@@ -93,16 +93,19 @@ def _(username):
         db = sqlite3.connect(str(pathlib.Path(__file__).parent.resolve())+"/twitter.db")
         # db = sqlite3.connect(os.getcwd()+"/twitter.db")
         db.row_factory = dict_factory
-        user = db.execute("SELECT * FROM users WHERE username=? COLLATE NOCASE",(username,)).fetchall()[0]
+        # user = db.execute("SELECT * FROM users WHERE user_name=? COLLATE NOCASE",(username,)).fetchall()[0]
+        user = db.execute("SELECT * FROM users WHERE user_name=? COLLATE NOCASE",(username,)).fetchone()
         # Get the user's id
-        user_id = user["id"]
+        user_id = user["user_id"]
         print("#"*30)
         print(f"user id:{user_id}")
+        
         # With that id, look up/get the respectives tweets
-        tweets = db.execute("SELECT * FROM tweets WHERE user_fk=?", (user_id,)).fetchall()
+        tweets = db.execute("SELECT * FROM tweets WHERE tweet_user_fk=?", (user_id,)).fetchall()
         print("#"*30)
         print(tweets)
         print("#"*30)
+        
         # pass the tweets to the view. Template it
         print(user) # {'id': '51602a9f7d82472b90ed1091248f6cb1', 'username': 'elonmusk', 'name': 'Elon', 'last_name': 'Musk', 'total_followers': '128900000', 'total_following': '177', 'total_tweets': '22700', 'avatar': '51602a9f7d82472b90ed1091248f6cb1.jpg'}
         return template("profile", user=user)
@@ -116,8 +119,10 @@ def _(username):
 
 
 ##############################
-# VEIWS
+# VIEWS
 import views.tweet
+
+import views.profile
 
 ##############################
 # APIS

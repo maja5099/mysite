@@ -18,7 +18,7 @@ print("directory of the script being run")
 print(pathlib.Path(__file__).parent.resolve()) # /home/USERNAME/mysite
 
 
-##############################
+###################################
 @get("/js/<filename>")
 def _(filename):
     return static_file(filename, "js")
@@ -61,6 +61,38 @@ def _(filename):
 @get("/app.css")
 def _():
     return static_file("app.css", root=".")
+
+
+###################################
+# VIEW AND SHOW LOGIN HTML
+@get("/login")
+def _():
+    return template("login")
+
+
+# VIEW AND SHOW LOGGED IN USER HTML
+@get("/logged_in_user")
+def _():
+    # Disable cache
+    response.add_header("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+    response.add_header("Pragma", "no-cache")
+    response.add_header("Expires", 0)
+
+    # Cookie
+    logged_in_user = request.get_cookie("logged_in_user", secret="my-secret")
+
+
+    # Username
+    return template("logged_in_user", logged_in_user=logged_in_user)
+
+
+# VIEW AND SHOW LOGOUT HTML
+@get("/logout")
+def _():
+    response.set_cookie("logged_in_user", "", expires=0)
+    response.status = 303
+    response.set_header("Location", "/login")
+    return
 
 
 ###################################
@@ -118,12 +150,17 @@ def _(username):
         if "db" in locals(): db.close()
 
 
-##############################
+###################################
 # VIEWS
 import views.tweet
 
 
-##############################
+###################################
+# IMPORT LOGIN.PY
+import bridges.login
+
+
+###################################
 # APIS
 import apis.api_tweet
 

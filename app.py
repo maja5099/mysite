@@ -122,7 +122,6 @@ def _(username):
 # VIEWS
 import views.tweet
 
-import views.profile
 
 ##############################
 # APIS

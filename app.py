@@ -5,7 +5,7 @@
 ###################################
 from bottle import default_app, get, post, static_file, run, template, response, request
 import os
-import git
+# import git
 import sqlite3
 import pathlib
 import uuid
@@ -96,7 +96,7 @@ def _():
 
 
 ###################################
-# ROUTE, SHOW HTML AND TITLE
+# ROUTE, SHOW HTML AND TITLE (INDEX)
 @get("/")
 def render_index():
     try:
@@ -106,8 +106,9 @@ def render_index():
         trends = db.execute("SELECT * FROM trends")
         users = db.execute("SELECT * FROM users")
         users_and_tweets = db.execute("SELECT * FROM users_and_tweets")
+
         return template("index", title="Twitter", tweets=tweets, trends=trends, users=users, users_and_tweets=users_and_tweets)
-    
+
     except Exception as ex:
         print(ex)
         response.status = 400
@@ -115,6 +116,9 @@ def render_index():
 
     finally:
         if "db" in locals(): db.close()
+
+
+
 
 
 ###################################
@@ -129,6 +133,9 @@ def _(username):
         user = db.execute("SELECT * FROM users WHERE user_name=? COLLATE NOCASE",(username,)).fetchone()
         # Get the user's id
         user_id = user["user_id"]
+        trends = db.execute("SELECT * FROM trends")
+        users = db.execute("SELECT * FROM users")
+        users_and_tweets = db.execute("SELECT * FROM users_and_tweets")
         print("#"*30)
         print(f"user id:{user_id}")
         
@@ -140,7 +147,7 @@ def _(username):
         
         # pass the tweets to the view. Template it
         print(user) # {'id': '51602a9f7d82472b90ed1091248f6cb1', 'username': 'elonmusk', 'name': 'Elon', 'last_name': 'Musk', 'total_followers': '128900000', 'total_following': '177', 'total_tweets': '22700', 'avatar': '51602a9f7d82472b90ed1091248f6cb1.jpg'}
-        return template("profile", user=user)
+        return template("profile", title="Twitter", user=user, tweets=tweets, trends=trends, users=users, users_and_tweets=users_and_tweets)
 
     except Exception as ex:
         print(ex)

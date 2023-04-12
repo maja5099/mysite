@@ -19,6 +19,12 @@
             </div>
             <!-- search end -->
 
+            <!-- tweet images start -->
+            % for user_and_tweet in users_and_tweets:
+            <img class="" src="images/tweet_images/{{user_and_tweet['tweet_image']}}" alt="">
+            % end
+            <!-- tweet images end -->
+
             <!-- you might like start -->
             <div class="bg-twitter-right-box-bg w-full mt-4 rounded-xl">
                 <h2 id="" class="text-20 font-bold text-twitter-light-grey px-4 py-2">You might like</h2>

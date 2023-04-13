@@ -20,9 +20,13 @@
             <!-- search end -->
 
             <!-- tweet images start -->
-            % for user_and_tweet in users_and_tweets:
-            <img class="" src="images/tweet_images/{{user_and_tweet['tweet_image']}}" alt="">
-            % end
+            <div class="mt-4">
+                <div class="grid grid-cols-3 gap-0.5 border border-twitter-line rounded-xl overflow-hidden">
+                    % for user_and_tweet in users_and_tweets:
+                        <img src="images/tweet_images/{{user_and_tweet['tweet_image']}}" alt="" class="h-24 w-full object-cover hover:cursor-pointer">
+                    % end
+                </div>
+            </div>
             <!-- tweet images end -->
 
             <!-- you might like start -->

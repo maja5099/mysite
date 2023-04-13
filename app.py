@@ -132,7 +132,7 @@ def _(username):
         user_id = user["user_id"]
         trends = db.execute("SELECT * FROM trends")
         users = db.execute("SELECT * FROM users")
-        users_and_tweets = db.execute("SELECT * FROM users_and_tweets")
+        users_and_tweets = db.execute("SELECT * FROM users_and_tweets WHERE tweet_user_fk=?", (user_id,)).fetchall()
         print("#"*30)
         print(f"user id:{user_id}")
         
@@ -176,7 +176,7 @@ try:
     application = default_app()
 except Exception as ex:
     print("Running local server")
-    run(host="127.0.0.1", port=5000, debug=True, reloader=True)
+    run(host="127.0.0.1", port=4000, debug=True, reloader=True)
 
 
 ###################################

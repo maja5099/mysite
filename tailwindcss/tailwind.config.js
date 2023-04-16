@@ -9,6 +9,7 @@ module.exports = {
       '15': '15px',
       '17': '17px',
       '20': '20px',
+      '23': '23px',
     },
 
     extend: {
@@ -16,6 +17,7 @@ module.exports = {
         'twitter-search-bg': '#202327',
         'twitter-light-grey': '#e7e9ea',
         'twitter-grey': '#71767B',
+        'twitter-dark-grey': '#0F1419',
         'twitter-dark-hover': '#181818', 
         'twitter-right-box-bg': '#16181C',
         'twitter-line': '#2F3336',
@@ -34,7 +36,10 @@ module.exports = {
         '13': '0.813rem',
         '250': '15.625rem',
         '350': '21.875rem',
+        '420': '26.25rem',
         '600': '37.5rem',
+        '640': '40rem',
+        '990': '61.875',
       },
       margin: {
         '18': '4.5'

@@ -1,3 +1,5 @@
+% include("x")
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 <body class="bg-black">
 
     <form method="POST" onsubmit="validate(tweet); return false">
-        <input name="message" type="text" data-validate="str" data-min="{{tweet_min_len}}" data-max="200">
+        <input name="message" type="text" data-validate="str" data-min="{{x.tweet_min_len}}" data-max="{{x.tweet_max_len}}">
         <button class="bg-white text-black">
             Tweet
         </button>

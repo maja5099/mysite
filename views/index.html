@@ -9,8 +9,40 @@
     <link rel="icon" type="image/png" href="/images/favicon/favicon.png">
     <title>Home / {{title}}</title>
 </head>
-<body class="bg-black">
+<body class="bg-black ">
 
+    <!-- pop up start -->
+    <div class="fixed bottom-0 w-full z-50">
+        <!-- log in start -->
+        <div class="bg-twitter-blue flex justify-center  items-center py-3 ">
+            <div class="w-full md:w-5/12 text-twitter-light-grey lg:pl-20  hidden md:block">
+                <p class="font-bold text-23">Don’t miss what’s happening</p>
+                <p class="text-15 -mt-1">People on Twitter are the first to know.</p>
+            </div>
+            <div class="flex justify-center items-center gap-2 w-11/12 md:w-fit">
+                <button onclick="window.location.href = 'login.html';" class="w-full md:w-fit py-1.5 md:px-4 border border-twitter-light-grey border-opacity-40 rounded-full font-semibold text-twitter-light-grey text-sm hover:bg-twitter-light-grey hover:bg-opacity-10">Log in</button>
+                <button class="w-full md:w-fit py-1.5 md:px-4 bg-twitter-light-grey rounded-full font-semibold text-twitter-dark-grey text-sm hover:bg-twitter-light-grey hover:bg-opacity-90">Sign up</button>
+            </div>
+        </div>
+        <!-- log in end -->
+
+        <!-- cookie start -->
+        <div class="bg-twitter-light-grey py-3 px-4 flex justify-center items-center place-content-evenly">
+            <div class="sm:w-10/12 lg:gap-8 xl:gap-28 flex flex-col lg:flex-row justify-center items-center">
+                <div class="w-full lg:w-640">
+                    <p class="text-17 font-medium text-twitter-dark-grey">Did someone say … cookies?</p>
+                    <p class="text-13 text-twitter-dark-grey leading-4 mt-1">Twitter and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. <a class="underline" href="">Show more about your choices.</a></p>
+                </div>
+                <div class="w-full sm:w-10/12 lg:w-420 flex justify-center flex-col gap-2 mt-2 py-4">
+                    <button class="bg-black opacity-75 hover:bg-opacity-70 transition duration-200 ease-in-out font-bold text-twitter-light-grey py-2 rounded-full">Accept all cookies</button>
+                    <button class="bg-black opacity-75 hover:bg-opacity-70 transition duration-200 ease-in-out font-bold text-twitter-light-grey py-2 rounded-full">Refuse non-essential cookies</button>
+                </div>
+            </div>
+        </div>
+        <!-- cookie end -->
+    </div>
+    <!-- pop up end -->
+    
     <div class="md:max-w-3xl lg:max-w-screen-xl mx-auto">
         <div class="flex justify-center">
             <!-- left start -->

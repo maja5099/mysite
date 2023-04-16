@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open/Close Example</title>
+  <style>
+    /* Style for the hidden element */
+    #hiddenElement {
+      display: none;
+    }
+  </style>
+  <script>
+    function openSomething() {
+      // function to open something
+      // In this example, we'll show a hidden element by setting its display property to 'block'
+      var hiddenElement = document.getElementById('hiddenElement');
+      hiddenElement.style.display = 'block';
+    }
+
+    function closeSomething() {
+      // function to close something
+      // In this example, we'll hide the previously shown element by setting its display property back to 'none'
+      var hiddenElement = document.getElementById('hiddenElement');
+      hiddenElement.style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+  <h1>Open/Close Example</h1>
+  <button onclick="openSomething()">Open Something</button>
+  <button onclick="closeSomething()">Close Something</button>
+  <div id="hiddenElement">
+    <!-- Content of the hidden element -->
+    <p>This is something that can be opened and closed.</p>
+  </div>
+</body>
+</html>

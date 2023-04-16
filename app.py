@@ -70,6 +70,27 @@ def _():
     return template("login")
 
 
+@get("/home_logged_out")
+def _():    
+    try:
+        db = sqlite3.connect(str(pathlib.Path(__file__).parent.resolve())+"/twitter.db")
+        db.row_factory = dict_factory
+        tweets = db.execute("SELECT * FROM tweets")
+        trends = db.execute("SELECT * FROM trends")
+        users = db.execute("SELECT * FROM users")
+        users_and_tweets = db.execute("SELECT * FROM users_and_tweets")
+
+        return template("home_logged_out", title="Twitter", tweets=tweets, trends=trends, users=users, users_and_tweets=users_and_tweets)
+
+    except Exception as ex:
+        print(ex)
+        response.status = 400
+        return {"error index": str(ex)}
+
+    finally:
+        if "db" in locals(): db.close()
+
+
 # VIEW AND SHOW LOGGED IN USER HTML
 @get("/logged_in_user")
 def _():

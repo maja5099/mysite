@@ -43,6 +43,12 @@ module.exports = {
       },
       margin: {
         '18': '4.5'
+      },
+      padding: {
+        '2.25': '9px',
+      },
+      boxShadow: {
+        'search': '5px 5px 5px 5px rgb(231,233,234, 0.25)',
       }
     },
   },

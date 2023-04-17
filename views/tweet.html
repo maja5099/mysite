@@ -1,4 +1,4 @@
-% include("x")
+% import x
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
 <body class="bg-black">
 
     <form method="POST" onsubmit="validate(tweet); return false">
-        <input name="message" type="text" data-validate="str" data-min="{{x.tweet_min_len}}" data-max="{{x.tweet_max_len}}">
+        <input name="message" type="text" data-validate="str" data-min="{{x.TWEET_MIN_LEN}}" data-max="{{x.TWEET_MAX_LEN}}">
         <button class="bg-white text-black">
             Tweet
         </button>
@@ -49,7 +49,7 @@
                 <form method="POST" onsubmit="validate(tweet); return false">
                 
                     <!-- text area start -->
-                    <input name="message" type="text" data-validate="str" data-min="{{tweet_min_len}}" data-max="200" placeholder="What's happening?" class="text-20 bg-black text-twitter-light-grey w-full placeholder-twitter-grey bg-inherit outline-none">
+                    <input name="message" type="text" data-validate="str" data-min="{{x.TWEET_MIN_LEN}}" data-max="{{x.TWEET_MAX_LEN}}" placeholder="What's happening?" class="text-20 bg-black text-twitter-light-grey w-full placeholder-twitter-grey bg-inherit outline-none">
                     <!-- text area end -->
 
                     <!-- icons start -->

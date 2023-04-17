@@ -149,6 +149,7 @@ def _(username):
         db.row_factory = dict_factory
         # user = db.execute("SELECT * FROM users WHERE user_name=? COLLATE NOCASE",(username,)).fetchall()[0]
         user = db.execute("SELECT * FROM users WHERE user_name=? COLLATE NOCASE",(username,)).fetchone()
+        print(user)
         # Get the user's id
         user_id = user["user_id"]
         trends = db.execute("SELECT * FROM trends")
@@ -188,6 +189,8 @@ import bridges.login
 ###################################
 # APIS
 import apis.api_tweet
+
+import apis.api_search
 
 
 ###################################

@@ -1,5 +1,4 @@
 from bottle import get, template
-import x
 
 tweets = [
     {"tweet_id": "1", "tweet_message": "a"},
@@ -9,4 +8,4 @@ tweets = [
 
 @get("/tweet")
 def _():
-    return template ("tweet", tweet_min_len=x.TWEET_MIN_LEN, tweet_max_len=x.TWEET_MAX_LEN, tweets=tweets)
+    return template ("tweet", tweets=tweets)

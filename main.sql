@@ -1,5 +1,9 @@
 -- ##############################
 -- USERS
+
+
+SELECT * FROM users WHERE user_name = "rammstein";
+
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
     user_id                     TEXT UNIQUE NOT NULL,
@@ -61,6 +65,8 @@ INSERT INTO tweets VALUES("23167c94fd8047f49a6b849b3929fca1", "Joker: Folie à D
 INSERT INTO tweets VALUES("2e081c561ce84092aeb7a945fb8d2571", "", "ace24fd7594c4b9da451592cff2a5b0b.jpg", "1690808220", "a9890d6a78a344ec87401cdb85e38a14", "1,443", "4,787", "52,500", "");
 INSERT INTO tweets VALUES("a39f6685b73c49cb874e6d8965ee1663", "That’s a wrap ❤️‍🔥 🎬🃏 X, Harleen", "5b3ebbafe0ce45f2ba29d180d9b1bd17.jpg", "1680748020", "a9890d6a78a344ec87401cdb85e38a14", "4,544", "47,500", "325,600", "");
 INSERT INTO tweets VALUES("e5fe564feed0433bb22aa31f3ba692c4", "#Oscars 2023 🖤 @tiffanyandco @hauslabs", "45bafefb34eb445eab7fbdb7861bb9ca.jpg", "1678734420", "a9890d6a78a344ec87401cdb85e38a14", "1,871", "10,000", "72,300", "");
+
+INSERT INTO tweets VALUES("2e081c561ce84092aeb7a945fb8d2572", "Elon tweet", "", "1690808220", "ebb0d9d74d6c4825b3e1a1bcd73ff49a", "1", "2", "3", "4");
 
 CREATE INDEX idx_tweets_tweet_image ON tweets(tweet_image);
 
